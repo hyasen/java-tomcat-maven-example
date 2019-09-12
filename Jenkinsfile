@@ -33,7 +33,7 @@ pipeline {
                     input message: 'Approve PRODUCTION Deployment?'
                 }
                 
-                build job : 'Deploy-Production-Pipeline'
+                build job : 'Deploy-Prod-Pipeline'
             }
  
             post{
