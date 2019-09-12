@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage ('Build Servlet Project') {
+        stage ('Test PipeLine Project') {
             steps {
                 /*For windows machine */
                bat  'mvn clean package'
@@ -16,6 +16,14 @@ pipeline {
  
                     archiveArtifacts artifacts : '**/*.war'
                 }
+            }
+        }
+ 
+        stage ('Deploy Build in Staging Area'){
+            steps{
+ 
+                build job : 'Test-PipeLine-Stage'
+ 
             }
         }
     }
