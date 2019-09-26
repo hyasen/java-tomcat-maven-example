@@ -19,7 +19,7 @@ pipeline {
             }
         }
  
-        stage ('Deploy Build in Staging Area'){
+        stage ('Deploy To Staging Area'){
             steps{
  
                 build job : 'Test-PipeLine-Stage'
